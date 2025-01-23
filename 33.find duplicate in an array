@@ -1,0 +1,17 @@
+using System;
+using System.Linq;
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter number of elements: ");
+        int n = int.Parse(Console.ReadLine());
+        int[] arr = new int[n];
+        Console.WriteLine("Enter elements:");
+        for (int i = 0; i < n; i++)
+            arr[i] = int.Parse(Console.ReadLine());
+
+        var duplicates = arr.GroupBy(x => x).Where(g => g.Count() > 1).Select(g => g.Key).ToList();
+        Console.WriteLine("Duplicate Elements: " + string.Join(" ", duplicates));
+    }
+}
