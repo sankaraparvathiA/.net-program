@@ -1,0 +1,20 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        int num, originalNum, reversed = 0;
+        Console.WriteLine("Enter a number:");
+        num = Convert.ToInt32(Console.ReadLine());
+        originalNum = num;
+        while (num != 0)
+        {
+            reversed = reversed * 10 + num % 10;
+            num /= 10;
+        }
+        if (originalNum == reversed)
+            Console.WriteLine("Palindrome");
+        else
+            Console.WriteLine("Not Palindrome");
+    }
+}
