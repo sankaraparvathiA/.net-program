@@ -1,0 +1,15 @@
+using System;
+using System.Linq;
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter first string: ");
+        string str1 = Console.ReadLine().ToLower();
+        Console.Write("Enter second string: ");
+        string str2 = Console.ReadLine().ToLower();
+
+        bool isAnagram = str1.OrderBy(c => c).SequenceEqual(str2.OrderBy(c => c));
+        Console.WriteLine(isAnagram ? "Strings are Anagrams" : "Strings are Not Anagrams");
+    }
+}
