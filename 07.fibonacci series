@@ -1,0 +1,19 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int n, firstTerm = 0, secondTerm = 1, nextTerm;
+        Console.WriteLine("Enter number of terms:");
+        n = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Fibonacci Series:");
+        for (int i = 1; i <= n; i++)
+        {
+            Console.Write(firstTerm + " ");
+            nextTerm = firstTerm + secondTerm;
+            firstTerm = secondTerm;
+            secondTerm = nextTerm;
+        }
+    }
+}
