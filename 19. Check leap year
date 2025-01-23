@@ -1,0 +1,10 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter a year: ");
+        int year = int.Parse(Console.ReadLine());
+        Console.WriteLine((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0) ? "Leap Year" : "Not a Leap Year");
+    }
+}       
