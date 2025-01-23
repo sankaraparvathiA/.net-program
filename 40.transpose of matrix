@@ -1,0 +1,30 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter rows and columns of the matrix: ");
+        int rows = int.Parse(Console.ReadLine());
+        int cols = int.Parse(Console.ReadLine());
+
+        int[,] matrix = new int[rows, cols];
+        int[,] transpose = new int[cols, rows];
+
+        Console.WriteLine("Enter elements of the matrix:");
+        for (int i = 0; i < rows; i++)
+            for (int j = 0; j < cols; j++)
+                matrix[i, j] = int.Parse(Console.ReadLine());
+
+        for (int i = 0; i < rows; i++)
+            for (int j = 0; j < cols; j++)
+                transpose[j, i] = matrix[i, j];
+
+        Console.WriteLine("Transpose of the Matrix:");
+        for (int i = 0; i < cols; i++)
+        {
+            for (int j = 0; j < rows; j++)
+                Console.Write(transpose[i, j] + " ");
+            Console.WriteLine();
+        }
+    }
+}
