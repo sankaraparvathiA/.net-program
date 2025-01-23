@@ -1,0 +1,13 @@
+using System;
+class Program
+{
+    static int GCD(int a, int b) => b == 0 ? a : GCD(b, a % b);
+    static void Main()
+    {
+        Console.Write("Enter two numbers: ");
+        int a = int.Parse(Console.ReadLine());
+        int b = int.Parse(Console.ReadLine());
+        int lcm = (a * b) / GCD(a, b);
+        Console.WriteLine("LCM: " + lcm);
+    }
+}
