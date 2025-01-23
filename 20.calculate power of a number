@@ -1,0 +1,12 @@
+using System;
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter base: ");
+        int baseNum = int.Parse(Console.ReadLine());
+        Console.Write("Enter exponent: ");
+        int exp = int.Parse(Console.ReadLine());
+        Console.WriteLine("Result: " + Math.Pow(baseNum, exp));
+    }
+}
